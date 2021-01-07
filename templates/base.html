@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title_text %}NeuroMorpho{% endblock title_text %}</title>
+    {% include 'css.html' %}
+    {% load static %}
+</head>
+<body>
+<div class="container-fluid">
+    {% block content %}
+        <a href="{% url 'core:neuron-list' %}"><h1 style="text-align: center;"><b>Neuro Morpho</b></h1></a>
+    {% endblock content %}
+</div>
+
+{% include 'js.html' %}
+</body>
+</html>

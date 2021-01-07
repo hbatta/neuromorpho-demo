@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Neuron ID</th>
+        <th>Neuron Name</th>
+        <th>Archive</th>
+        <th>Soma Surface</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for neuron in neuron_list %}
+    <tr>
+        <td>{{ neuron.neuron_id }}</td>
+        <td><a href="#">{{ neuron.neuron_name }}</a></td>
+        <td>{{ neuron.archive }}</td>
+        <td>{{ neuron.soma_surface }}</td>
+        <td>
+            <a href="#">Edit</a>
+        </td>
+        <td>
+            <a href="#">Delete</a>
+        </td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
